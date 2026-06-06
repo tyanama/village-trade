@@ -22,7 +22,7 @@ public class VillagerEventHandler {
         if (offers == null) return;
 
         for (MerchantOffer offer : offers) {
-            if (offer.isBlockedByPlayerCooldown()) {
+            if (offer.isOutOfStock()) {
                 offer.resetUses();
             }
             if (offer.getMaxUses() < 99999) {
@@ -44,7 +44,7 @@ public class VillagerEventHandler {
         if (offers == null || offers.isEmpty()) return;
 
         for (MerchantOffer offer : offers) {
-            if (offer.isBlockedByPlayerCooldown()) continue;
+            if (offer.isOutOfStock()) continue;
 
             ItemStack costA = offer.getCostA();
             ItemStack costB = offer.getCostB();
