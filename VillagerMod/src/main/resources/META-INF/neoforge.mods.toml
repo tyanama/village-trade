@@ -1,0 +1,25 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "MIT"
+
+[[dependencies.villagermod]]
+    modId = "neoforge"
+    type = "required"
+    versionRange = "[21.1,)"
+    ordering = "NONE"
+    side = "BOTH"
+
+[[dependencies.villagermod]]
+    modId = "minecraft"
+    type = "required"
+    versionRange = "[1.21.1,1.22)"
+    ordering = "NONE"
+    side = "BOTH"
+
+[[mods]]
+    modId = "villagermod"
+    version = "1.0.0"
+    displayName = "VillagerMod"
+    description = '''
+村人の取引上限をなくして何度でも交換可能、さらに一括交換もできるMODです。
+'''
