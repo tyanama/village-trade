@@ -25,9 +25,6 @@ public class VillagerEventHandler {
             if (offer.isOutOfStock()) {
                 offer.resetUses();
             }
-            if (offer.getMaxUses() < 99999) {
-                offer.setMaxUses(99999);
-            }
         }
     }
 
