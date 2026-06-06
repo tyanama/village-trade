@@ -7,13 +7,13 @@ import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraft.world.item.trading.MerchantOffers;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
-import net.neoforged.neoforge.event.entity.living.LivingEvent;
+import net.neoforged.neoforge.event.tick.EntityTickEvent;
 
 public class VillagerEventHandler {
 
     // ---- 取引上限をリセット ----
     @SubscribeEvent
-    public void onVillagerTick(LivingEvent.LivingTickEvent event) {
+    public void onEntityTick(EntityTickEvent.Post event) {
         if (!VillagerConfig.unlimitedTrades) return;
         if (!(event.getEntity() instanceof Villager villager)) return;
         if (villager.level().isClientSide()) return;
